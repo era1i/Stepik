@@ -1,7 +1,9 @@
+# put your python code here
+
 def pasc(n):
-    ret = []
+    ret = list()
     for i in range(n):
-        temp = []
+        temp = list()
         for j in range(i):
             if j == 0:
                 temp.append(1)
@@ -11,9 +13,8 @@ def pasc(n):
         ret.append(temp)
     return ret
 
-def print_list(l):
-    print('\n'.join(*[str(i) for i in l]))
+def print_mat(m):
+    print('\n'.join([str(j).replace('[', '').replace(']', '').replace(',', '') for j in m]))
 
-print_list(pasc(4))
-
-
+n = int(input())
+print_mat(pasc(n))
