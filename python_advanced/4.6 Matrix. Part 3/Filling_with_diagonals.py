@@ -8,7 +8,7 @@ def fill_diag(matrix):
     for k in range(n + m - 1):
         for i in range(n):
             for j in range(m):
-                if n + m == k:
+                if i + j == k:
                     matrix[i][j] = num
                     num += 1
                     break
